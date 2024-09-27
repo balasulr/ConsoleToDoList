@@ -8,4 +8,9 @@
     <StartupObject>ToDoList.ProgramEnhancements</StartupObject>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+	</PropertyGroup>
+
 </Project>
