@@ -50,6 +50,7 @@ namespace ToDoList
                         Console.WriteLine("Thank you for using the program! Please come again!");
                         return; // Exits the program
                     default: // Deals with incorrect input
+                        Console.WriteLine();
                         Console.WriteLine("Invalid choice entered, Please enter a number between 1 to 3 or E to Exit Program");
                         Console.WriteLine();
                         break;
@@ -85,6 +86,7 @@ namespace ToDoList
         // Option 2: Removes task from list
         static void RemoveTask()
         {
+            Console.WriteLine();
             Console.WriteLine("These are all the tasks in a list:");
 
             // Prints all tasks in list with for loop
