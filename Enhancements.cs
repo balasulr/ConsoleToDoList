@@ -21,6 +21,7 @@ namespace ToDoList
             while (option != "E")
             {
                 // Menu options
+                Console.WriteLine();
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine();
 
@@ -87,6 +88,13 @@ namespace ToDoList
         static void RemoveTask()
         {
             Console.WriteLine();
+
+            if (taskList.Count == 0)
+            {
+                Console.WriteLine("No tasks to remove, please try again!");
+                return;
+            }
+
             Console.WriteLine("These are all the tasks in a list:");
 
             // Prints all tasks in list with for loop
