@@ -15,8 +15,6 @@ namespace ToDoList
 
             Console.WriteLine(); // Adds new line to Console application
 
-            //Del? List<string> taskList = new List<string>(); // String List to hold tasks in to do list
-
             string option = ""; // String that will contain player's choice
 
             // Main loop of program that continues running until player exits program with E
@@ -59,7 +57,7 @@ namespace ToDoList
             }
         }
 
-        // String List to hold tasks in to do list
+        // String List to store tasks in to-do list
         static List<string> taskList = new List<string>();
 
         // Option 1: Adds task to list
