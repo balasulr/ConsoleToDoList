@@ -95,7 +95,7 @@ namespace ToDoList
                 return;
             }
 
-            Console.WriteLine("These are all the tasks in a list:");
+            Console.WriteLine("These are all the tasks in the list:");
 
             // Prints all tasks in list with for loop
             for (int i = 0; i < taskList.Count; i++)
@@ -106,12 +106,18 @@ namespace ToDoList
             Console.WriteLine();
             Console.WriteLine("Please enter the number of task to remove from list:"); // Number of task that want to remove from list
 
-            int taskNumber = Convert.ToInt32(Console.ReadLine()); // Retrieves the number entered from player
+            // Retrieves the number entered from player and validates it
+            if (int.TryParse(Console.ReadLine(), out int taskNumber) && taskNumber >= 0 && taskNumber < taskList.Count)
+            {
+                taskList.RemoveAt(taskNumber); // Removes the item from list
+                Console.WriteLine();
+                Console.WriteLine("Task removed successfully from the list!");
+            } else
+            {
+                Console.WriteLine();
+                Console.WriteLine("Invalid input please try again!");
+            }
 
-            taskList.RemoveAt(taskNumber); // Removes the item from list
-            Console.WriteLine();
-            Console.WriteLine("Task removed successfully from the list!");
-            Console.WriteLine();
         }
 
         // Option 3: View the list
